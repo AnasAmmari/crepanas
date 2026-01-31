@@ -23,7 +23,7 @@ function envoyerFeedback() {
     var message = document.getElementById('msgClient').value;
 
     if (nom == "" || message == "") {
-        alert("Attention Anas ! Tous les champs doivent être remplis.");
+        alert("Attention ! Tous les champs doivent être remplis.");
     } else {
         // Simulation d'envoi
         alert("Merci " + nom + " ! Ton avis a été envoyé à CrêpAnas.");
@@ -37,4 +37,5 @@ function envoyerFeedback() {
 // 3. Petite touche pro : Message console au chargement
 window.onload = function() {
     console.log("Site CrêpAnas chargé avec succès. Propriétaire: Anas Ammari (24001725)");
+
 };
