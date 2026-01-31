@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anas Ammari">
+    <title>CrêpAnas | Restaurant</title>
+ <link rel="stylesheet" href="monsite.css">
+<body>
+
+    <div class="contact-banner">
+        📧 Contact : anas_ammari2@gmail.com | apoge : 24001725
+    </div>
+
+    <header>
+        <div class="logo">Crêp<span>Anas</span></div>
+        <nav>
+            <button onclick="naviguer('accueil')">Accueil</button>
+            <button onclick="naviguer('menu')">Menu</button>
+            <button onclick="naviguer('feedback')">Avis</button>
+        </nav>
+    </header>
+
+    <main id="contenu-principal">
+       
+        <section id="accueil" class="page active">
+    <div class="hero">
+        <img src="/images/thumb-1920-918405.jpg" alt="Crêpe Gourmet" class="img-hero">
+        
+        <h2>Bienvenue chez Anas Ammari</h2>
+        <p>L'art de la crêpe marocaine et internationale.</p>
+        <button class="btn-cta" onclick="naviguer('menu')">Découvrir le Menu</button>
+    </div>
+</section>
+
+       <section id="menu" class="page">
+    <h2>Notre Carte Gourmande</h2>
+    <div class="grille-menu">
+        
+        <div class="plat">
+            <img src="/images/amlou.jpg" alt="Crêpe Amlou">
+            <div class="plat-info">
+                <h3>La Classique Amlou</h3>
+                <p>Miel pur et amlou artisanal du Souss.</p>
+                <span class="prix">25 DH</span>
+                <button onclick="ajouterAuPanier(25)">Commander</button>
+            </div>
+        </div>
+
+        <div class="plat">
+            <img src="/images/nutella2.png" alt="Crêpe Nutella">
+            <div class="plat-info">
+                <h3>L'Irrésistible Nutella</h3>
+                <p>Chocolat fondant, éclats de noisettes et banane.</p>
+                <span class="prix">35 DH</span>
+                <button onclick="ajouterAuPanier(35)">Commander</button>
+            </div>
+        </div>
+
+        <div class="plat">
+            <img src="/images/hh.png" alt="Crêpe Salée">
+            <div class="plat-info">
+                <h3>La Royale Salée</h3>
+                <p>Fromage fondu, dinde fumée et œuf miroir.</p>
+                <span class="prix">40 DH</span>
+                <button onclick="ajouterAuPanier(40)">Commander</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+        <section id="feedback" class="page">
+            <h2>Laissez un Feedback</h2>
+            <div class="form-container">
+                <input type="text" id="nomClient" placeholder="Votre nom"><br>
+                <textarea id="msgClient" placeholder="Qu'avez-vous pensé de nos crêpes ?"></textarea><br>
+                <button onclick="envoyerFeedback()">Envoyer l'avis</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       <p>  📧 Contact :<strong> anas_ammari2@gmail.com</strong> </p>
+        <p>Propriétaire : <strong>Anas Ammari</strong> | code apoge : <strong>24001725</strong></p>
+        <p>&copy; 2026 CrêpAnas - Rabat Institituel</p>
+    </footer>
+
+    <script src="monsite.js"></script>
+</body>
+</html>
+</head>

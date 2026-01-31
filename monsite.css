@@ -1,0 +1,192 @@
+/* Couleurs Thème Crêpe */
+:root {
+    --bg-color: #fcfaf7;      /* Blanc cassé / Crème */
+    --primary: #d4a373;       /* Marron clair (faded) */
+    --secondary: #faedcd;    /* Jaune pâle */
+    --text: #4a3f35;         /* Chocolat noir doux */
+    --accent: #e9edc9;       /* Vert d'eau très pâle */
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Bannière supérieure */
+.contact-banner {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo span { color: var(--text); }
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* Gestion des pages */
+.page {
+    display: none;
+    padding: 40px 10%;
+    animation: fadeIn 0.5s;
+}
+
+.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Grille du Menu */
+.grille-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Style des cartes de plat */
+.plat {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; /* Pour que l'image suive l'arrondi de la carte */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--secondary);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.plat:hover {
+    transform: translateY(-8px);
+}
+
+/* Image à l'intérieur de la carte */
+.plat img {
+    width: 100%;
+    height: 180px; /* Hauteur fixe pour que toutes les cartes soient égales */
+    object-fit: cover; /* Recadre l'image sans la déformer */
+}
+
+/* Texte à l'intérieur de la carte */
+.plat-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.plat h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: var(--text);
+}
+
+.prix {
+    display: block;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+/* Feedback Form */
+.form-container input, .form-container textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--secondary);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header { flex-direction: column; }
+    nav { margin-top: 15px; }
+}/* Style de l'image Hero */
+.img-hero {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px; /* Bords arrondis pour le style pro */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    filter: sepia(10%); /* Effet légèrement vintage/faded */
+}
+
+/* Boutons Esthétiques */
+button, .btn-cta {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px; /* Boutons "Pill" très modernes */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition fluide */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+/* Effet au survol (Hover) */
+button:hover, .btn-cta:hover {
+    background-color: #bc8a5f; /* Un marron un peu plus foncé */
+    transform: translateY(-3px); /* Le bouton "saute" légèrement */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Effet au clic (Active) */
+button:active, .btn-cta:active {
+    transform: translateY(0);
+}
+
+/* Style spécifique pour la navigation pour qu'ils ne ressemblent pas tous à des gros boutons */
+nav button {
+    background: none;
+    box-shadow: none;
+    color: var(--text);
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: 5px 10px;
+}
+
+nav button:hover {
+    background: none;
+    box-shadow: none;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    transform: none;
+}
